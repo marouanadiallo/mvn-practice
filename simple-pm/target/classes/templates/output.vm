@@ -1,0 +1,19 @@
+*********************************
+ Person Information:
+  Name: ${person.name}
+  Email: ${person.email},
+  Phone: ${person.phone}
+  WebSite: ${person.website}
+
+    Address:
+        Street: ${person.address.street}
+        Suite: ${person.address.suite}
+        City: ${person.address.city}
+        Zip: ${person.address.zipcode}
+        Geo: ${person.address.geo.lat}, ${person.address.geo.lng}
+    Company:
+        Name: ${person.company.name}
+        Cath: phrase: ${person.company.catchPhrase}
+        Bs: ${person.company.bs}
+
+*********************************

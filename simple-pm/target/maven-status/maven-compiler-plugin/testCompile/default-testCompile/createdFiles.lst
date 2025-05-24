@@ -1,0 +1,5 @@
+com\alphamar\pm\services\PersonServiceTest$ITPersonServiceTest.class
+com\alphamar\pm\utils\JsonParserTest.class
+com\alphamar\pm\utils\PersonFormatterTest.class
+com\alphamar\pm\utils\WebClientTest.class
+com\alphamar\pm\services\PersonServiceTest.class
