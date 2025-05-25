@@ -7,7 +7,7 @@
   <artifactId>simple-pm</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>pm-parent</name>
+  <name>simple-pm</name>
 
   <organization>
     <name>Dialltay</name>
