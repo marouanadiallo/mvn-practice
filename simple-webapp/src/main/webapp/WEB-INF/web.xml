@@ -9,11 +9,11 @@
   <display-name>Archetype Created Web Application</display-name>
 
     <servlet>
-        <servlet-name>simple</servlet-name>
-        <servlet-class>com.alphamar.powa.web.SimpleServlet</servlet-class>
+        <servlet-name>persons</servlet-name>
+        <servlet-class>com.alphamar.powa.web.PersonFinderServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>simple</servlet-name>
-        <url-pattern>/simple</url-pattern>
+        <servlet-name>persons</servlet-name>
+        <url-pattern>/persons</url-pattern>
     </servlet-mapping>
 </web-app>
