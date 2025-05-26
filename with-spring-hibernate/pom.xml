@@ -1,21 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>com.alphamar</groupId>
-  <artifactId>simple-parent</artifactId>
+  <artifactId>simple-project</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
-
-  <name>simple-parent</name>
+  <name>simple-project</name>
 
   <modules>
-    <module>simple-webapp</module>
+    <module>simple-model</module>
     <module>simple-pm</module>
+    <module>simple-webapp</module>
+    <module>simple-persist</module>
+    <module>simple-command</module>
   </modules>
-
 
   <organization>
     <name>Dialltay</name>
@@ -34,7 +31,6 @@
       </roles>
     </developer>
   </developers>
-
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -43,13 +39,11 @@
       <comments>Apache Software Foundation</comments>
     </license>
   </licenses>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
   </properties>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -59,9 +53,15 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>org.hibernate.orm</groupId>
+        <artifactId>hibernate-platform</artifactId>
+        <version>7.0.0.Final</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -75,7 +75,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <finalName>simple-webapp</finalName>
     <!-- lock down plugin versions to avoid using Maven defaults -->
@@ -111,16 +110,15 @@
         </plugin>
       </plugins>
     </pluginManagement>
-
     <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-              <source>${maven.compiler.source}</source>
-              <target>${maven.compiler.target}</target>
-            </configuration>
-        </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
